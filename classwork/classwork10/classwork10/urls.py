@@ -1,5 +1,5 @@
 """
-URL configuration for homeproject project.
+URL configuration for classwork10 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,12 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from firstapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name='home'),
-    path('about/',views.about,name='about'),
-    path('contact/',views.contact,name='contact'),
-    path('signup/', views.signup_view, name='signup'),
 ]
