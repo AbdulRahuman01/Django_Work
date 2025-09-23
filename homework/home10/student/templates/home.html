@@ -2,7 +2,7 @@
     <input type="text" name="q" placeholder="Search by name" value="{{ request.GET.q }}">
     <button type="submit">Search</button>
 </form>
-
+<a href="{% url 'add_student' %}">add student</a>
 {% if students %}
 <table border="1" cellpadding="10">
     <tr>
@@ -19,11 +19,11 @@
         <td>{{ student.age }}</td>
         <td>
             <a href="{% url 'edit_student' student.id %}">✏️ Edit</a> |
-            <a href="{% url 'delete_student' student.id %}">🗑️ Delete</a>
+            <a href="{% url 'delete_student' student.id %}"> Delete</a>
         </td>
     </tr>
     {% endfor %}
 </table>
 {% else %}
-<p>❌ Student doesn’t exist.</p>
+<p>Student doesn’t exist.</p>
 {% endif %}
